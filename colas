@@ -1,0 +1,31 @@
+<h1>colas sin libreria</h1>
+public void mostrar() {
+    cola aux = new cola();
+    int x;
+    while (!c.vacia()) {
+        x = c.desencolar();
+        System.out.print(x + " ");
+        aux.encolar(x);
+    }
+    // Restaurar los elementos a la cola original c
+    while (!aux.vacia()) {
+        x = aux.desencolar();
+        c.encolar(x);
+    }
+}
+
+public void eliminardeterminado(int x) {
+    cola aux = new cola();
+    int y;
+    while (!c.vacia()) {
+        y = c.desencolar();
+        if (y != x) {
+            aux.encolar(y);
+        }
+    }
+    // Restaurar los elementos a la cola original c, excepto el eliminado
+    while (!aux.vacia()) {
+        y = aux.desencolar();
+        c.encolar(y);
+    }
+}
